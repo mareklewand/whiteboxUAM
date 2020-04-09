@@ -56,9 +56,9 @@ public class PersonalData {
         //Code review - discussion
         //83062113611
         //13220203470
-        for (int i=0; i<4; i++) {
+        for (int i=0; i<=4; i++) {
             if (month - i*20 > 0 && month - i*20 <= 12)
-                return month;
+                return month - i*20;
         }
         return 0;
     }
@@ -76,7 +76,7 @@ public class PersonalData {
         if (month == 2 && day > 29)
             return false;
 
-        if (day == 31 && (month==4 || month ==6 || month == 10 || month == 11))
+        if (day == 31 && (month==4 || month ==6 || month == 9 || month == 11))
             return false;
 
         return true;

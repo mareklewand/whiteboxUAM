@@ -24,7 +24,6 @@ public class PersonalDataTest {
         assertEquals(pd.validateSurname("Kosiniak-Kamysz"), true);
     }
 
-
     @Test
     public void shouldReturnFalseIfSurnameIsInvalid()  {
         assertEquals(pd.validateSurname("Lewandowski; drop table users"), false);
