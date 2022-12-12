@@ -31,7 +31,7 @@ public class PersonalData {
             return false;
 
         String tmp = pesel.substring(2, 4);
-        if (parseMonth(new Integer(tmp))==0)
+        if (parseMonth(Integer.parseInt(tmp))==0)
             return false;
 
         if (!checkDay(pesel.substring(4,6), pesel.substring(2, 4)))
@@ -66,8 +66,8 @@ public class PersonalData {
     private boolean checkDay(String days, String months) {
         //RubberDuck method
         //83062113611
-        int day = new Integer(days);
-        int month = new Integer(months);
+        int day = Integer.parseInt(days);
+        int month = Integer.parseInt(months);
         month = parseMonth(month);
 
         if (day < 1 || day > 31)
@@ -90,7 +90,7 @@ public class PersonalData {
         }
 
         for (int i = 0; i<pesel.length(); i++) {
-            digits.add(new Integer(chars.get(i).toString()));
+            digits.add(Integer.valueOf(chars.get(i).toString()));
         }
 
         int sum = 1 * digits.get(0);
