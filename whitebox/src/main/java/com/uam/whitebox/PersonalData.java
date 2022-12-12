@@ -105,7 +105,7 @@ public class PersonalData {
         sum+= 3 * digits.get(9);
         sum %= 10;
         sum = 10-sum;
-
+        sum %= 10;
         if (sum == digits.get(10))
             return true;
 
